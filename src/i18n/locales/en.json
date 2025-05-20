@@ -1,0 +1,136 @@
+
+{
+  "app_name": "MekarMap",
+  "login": {
+    "title": "Login",
+    "user_id": "User ID",
+    "credentials": "Password",
+    "submit": "Login",
+    "error": "Invalid User ID or Password"
+  },
+  "navigation": {
+    "home": "Home",
+    "map": "Map",
+    "reports": "Reports",
+    "profile": "Profile"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "offline_mode": "Offline Mode",
+    "notifications": "Notifications",
+    "save": "Save Changes"
+  },
+  "language": {
+    "id": "Bahasa Indonesia",
+    "en": "English",
+    "su": "Basa Sunda"
+  },
+  "profile": {
+    "title": "User Profile",
+    "user_id": "User ID",
+    "name": "Name",
+    "role": "Role",
+    "points": "Reward Points",
+    "logout": "Logout"
+  },
+  "reports": {
+    "title": "My Reports",
+    "create": "Create New Report",
+    "empty": "No reports yet",
+    "recent": "Recent Reports",
+    "status": {
+      "submitted": "Submitted",
+      "verified": "Verified",
+      "inprogress": "In Progress",
+      "resolved": "Resolved",
+      "rejected": "Rejected"
+    },
+    "update_status": "Update Status"
+  },
+  "report_form": {
+    "title": "Create New Report",
+    "type": "Report Type",
+    "description": "Description",
+    "location": "Location",
+    "photos": "Photos",
+    "add_photo": "Add Photo",
+    "private": "Private Report",
+    "submit": "Submit Report",
+    "location_required": "Location is required",
+    "description_required": "Description is required",
+    "success": "Report submitted successfully",
+    "offline_saved": "Report saved offline and will be sent when online"
+  },
+  "report_types": {
+    "crime_theft": "Theft",
+    "crime_vandalism": "Vandalism",
+    "infra_road": "Road Damage",
+    "infra_lights": "Street Light Issue",
+    "enviro_waste": "Illegal Waste Dumping",
+    "enviro_water": "Water Pollution",
+    "other": "Other"
+  },
+  "map": {
+    "my_location": "My Location",
+    "filter": "Filter",
+    "search": "Search Location",
+    "view_reports": "View Reports",
+    "view_details": "View Details"
+  },
+  "tutorial": {
+    "title": "Tutorial",
+    "next": "Next",
+    "previous": "Previous",
+    "skip": "Skip",
+    "finish": "Finish",
+    "step1": {
+      "title": "Welcome to MekarMap",
+      "content": "A reporting app for community improvement"
+    },
+    "step2": {
+      "title": "Create Reports",
+      "content": "Press the + button to report issues in your community"
+    },
+    "step3": {
+      "title": "Interactive Map",
+      "content": "View report locations on the map and explore issues around you"
+    },
+    "step4": {
+      "title": "Earn Rewards",
+      "content": "Collect points each time you create a verified report"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "view_details": "View Details",
+    "submit": "Submit",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "welcome": "Welcome",
+    "quick_actions": "Quick Actions",
+    "offline_items": "Offline Items",
+    "items_to_sync": "{{count}} items to sync",
+    "sync": "Sync",
+    "offline": "You are offline",
+    "offline_mode_active": "Offline mode active",
+    "public": "Public",
+    "play": "Play",
+    "view_all": "View All",
+    "status_updated": "Status updated successfully"
+  },
+  "roles": {
+    "Resident": "Resident",
+    "GovernmentOfficial": "Government Official",
+    "Administrator": "Administrator"
+  }
+}

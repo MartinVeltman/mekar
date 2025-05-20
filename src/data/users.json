@@ -1,0 +1,9 @@
+
+[
+  {"userID": "resident01", "credentials": "password", "name": "Budi", "role": "Resident", "languagePref": "id", "rewardPoints": 150},
+  {"userID": "resident02", "credentials": "password", "name": "Siti", "role": "Resident", "languagePref": "id", "rewardPoints": 80},
+  {"userID": "resident03", "credentials": "password", "name": "Asep", "role": "Resident", "languagePref": "su", "rewardPoints": 210},
+  {"userID": "gov01", "credentials": "password", "name": "Ibu Siti", "role": "GovernmentOfficial", "languagePref": "id"},
+  {"userID": "gov02", "credentials": "password", "name": "Pak Joko", "role": "GovernmentOfficial", "languagePref": "id"},
+  {"userID": "admin01", "credentials": "password", "name": "Admin Utama", "role": "Administrator", "languagePref": "id"}
+]

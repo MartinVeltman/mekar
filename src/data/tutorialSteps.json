@@ -1,0 +1,27 @@
+
+[
+  {
+    "icon": "welcome",
+    "text_id": "tutorial.step1.title",
+    "content_id": "tutorial.step1.content",
+    "audio_id": "tutorial_step1_audio.mp3"
+  },
+  {
+    "icon": "create_report",
+    "text_id": "tutorial.step2.title",
+    "content_id": "tutorial.step2.content",
+    "audio_id": "tutorial_step2_audio.mp3"
+  },
+  {
+    "icon": "interactive_map",
+    "text_id": "tutorial.step3.title",
+    "content_id": "tutorial.step3.content",
+    "audio_id": "tutorial_step3_audio.mp3"
+  },
+  {
+    "icon": "rewards",
+    "text_id": "tutorial.step4.title",
+    "content_id": "tutorial.step4.content", 
+    "audio_id": "tutorial_step4_audio.mp3"
+  }
+]

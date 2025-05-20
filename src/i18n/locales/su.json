@@ -1,0 +1,129 @@
+
+{
+  "app_name": "MekarMap",
+  "login": {
+    "title": "Asup",
+    "user_id": "ID Pamaké",
+    "credentials": "Kecap Konci",
+    "submit": "Asup",
+    "error": "ID Pamaké atanapi Kecap Konci henteu valid"
+  },
+  "navigation": {
+    "home": "Tepas",
+    "map": "Peta",
+    "reports": "Laporan",
+    "profile": "Profil"
+  },
+  "settings": {
+    "title": "Setélan",
+    "language": "Basa",
+    "offline_mode": "Mode Offline",
+    "notifications": "Béwara",
+    "save": "Simpen Parobahan"
+  },
+  "language": {
+    "id": "Bahasa Indonesia",
+    "su": "Basa Sunda"
+  },
+  "profile": {
+    "title": "Profil Pamaké",
+    "user_id": "ID Pamaké",
+    "name": "Ngaran",
+    "role": "Peran",
+    "points": "Poin Hadiah",
+    "logout": "Kaluar"
+  },
+  "reports": {
+    "title": "Laporan Abdi",
+    "create": "Jieun Laporan Anyar",
+    "empty": "Teu acan aya laporan",
+    "status": {
+      "submitted": "Dikirim",
+      "verified": "Diverifikasi",
+      "inprogress": "Keur Diproses",
+      "resolved": "Réngsé",
+      "rejected": "Ditolak"
+    },
+    "update_status": "Perbarui Status"
+  },
+  "report_form": {
+    "title": "Jieun Laporan Anyar",
+    "type": "Jenis Laporan",
+    "description": "Déskripsi",
+    "location": "Lokasi",
+    "photos": "Poto",
+    "add_photo": "Tambah Poto",
+    "private": "Laporan Pribadi",
+    "submit": "Kirim Laporan",
+    "location_required": "Lokasi diperlukeun",
+    "description_required": "Déskripsi diperlukeun",
+    "success": "Laporan hasil dikirim",
+    "offline_saved": "Laporan disimpen offline sareng bakal dikirim nalika online"
+  },
+  "report_types": {
+    "crime_theft": "Paling",
+    "crime_vandalism": "Vandalisme",
+    "infra_road": "Karuksakan Jalan",
+    "infra_lights": "Lampu Jalan Ruksak",
+    "enviro_waste": "Pamiceunan Runtah Liar",
+    "enviro_water": "Pencemaran Cai",
+    "other": "Séjénna"
+  },
+  "map": {
+    "my_location": "Lokasi Abdi",
+    "filter": "Filter",
+    "search": "Paluruh Lokasi",
+    "view_reports": "Tingali Laporan",
+    "view_details": "Tingali Detail"
+  },
+  "tutorial": {
+    "title": "Tutorial",
+    "next": "Teras",
+    "previous": "Saméméhna",
+    "skip": "Liwat",
+    "finish": "Réngsé",
+    "step1": {
+      "title": "Wilujeng sumping di MekarMap",
+      "content": "Aplikasi pelaporan pikeun kamajuan komunitas"
+    },
+    "step2": {
+      "title": "Jieun Laporan",
+      "content": "Pencét tombol + pikeun ngalaporkeun masalah di komunitas Anjeun"
+    },
+    "step3": {
+      "title": "Peta Interaktif",
+      "content": "Tingali lokasi laporan dina peta sareng paluruh masalah di sabudeureun Anjeun"
+    },
+    "step4": {
+      "title": "Kéngingkeun Hadiah",
+      "content": "Kempelkeun poin saban Anjeun ngadamel laporan anu diverifikasi"
+    }
+  },
+  "common": {
+    "loading": "Ngamuat...",
+    "error": "Kajadian kasalahan",
+    "retry": "Cobian deui",
+    "back": "Balik",
+    "save": "Simpen",
+    "cancel": "Bolay",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "view": "Tingali",
+    "view_details": "Tingali Detail",
+    "submit": "Kirim",
+    "close": "Tutup",
+    "yes": "Enya",
+    "no": "Henteu",
+    "offline": "Anjeun offline",
+    "offline_mode_active": "Mode offline aktif",
+    "public": "Publik",
+    "play": "Puter",
+    "view_all": "Tingali Sadayana", 
+    "status_updated": "Status réngsé diperbarui"
+  },
+  "roles": {
+    "Resident": "Warga",
+    "GovernmentOfficial": "Patugas Pamaréntah",
+    "Administrator": "Administrator"
+  }
+}

@@ -1,0 +1,58 @@
+
+[
+  {
+    "reportID": "rep001",
+    "userID": "resident01",
+    "type": "infra_road",
+    "description": "Jalan berlubang cukup dalam, berbahaya untuk pengendara motor dan sepeda.",
+    "geoPoint": {"lat": -6.9121, "lon": 107.6085},
+    "photos": ["mock_road_damage.jpg"],
+    "timestamp": "2025-05-16T12:30:00Z",
+    "status": "Verified",
+    "isPrivate": false
+  },
+  {
+    "reportID": "rep002",
+    "userID": "resident01",
+    "type": "enviro_waste",
+    "description": "Pembuangan sampah liar di pinggir sungai.",
+    "geoPoint": {"lat": -6.9005, "lon": 107.6184},
+    "photos": ["mock_waste.jpg"],
+    "timestamp": "2025-05-15T09:45:00Z",
+    "status": "InProgress",
+    "isPrivate": false
+  },
+  {
+    "reportID": "rep003",
+    "userID": "resident02",
+    "type": "crime_vandalism",
+    "description": "Beberapa graffiti di tembok sekolah dasar.",
+    "geoPoint": {"lat": -6.9231, "lon": 107.6166},
+    "photos": ["mock_vandalism.jpg"],
+    "timestamp": "2025-05-14T16:20:00Z",
+    "status": "Submitted",
+    "isPrivate": false
+  },
+  {
+    "reportID": "rep004",
+    "userID": "resident03",
+    "type": "infra_lights",
+    "description": "Lampu jalan tidak berfungsi selama 3 hari. Area menjadi gelap dan tidak aman.",
+    "geoPoint": {"lat": -6.9155, "lon": 107.6103},
+    "photos": ["mock_street_light.jpg"],
+    "timestamp": "2025-05-17T18:10:00Z",
+    "status": "Resolved",
+    "isPrivate": false
+  },
+  {
+    "reportID": "rep005",
+    "userID": "resident01",
+    "type": "crime_theft",
+    "description": "Sepeda curian dari halaman rumah saya.",
+    "geoPoint": {"lat": -6.9089, "lon": 107.6128},
+    "photos": [],
+    "timestamp": "2025-05-18T07:30:00Z",
+    "status": "Submitted",
+    "isPrivate": true
+  }
+]

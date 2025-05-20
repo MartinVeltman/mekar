@@ -1,0 +1,10 @@
+
+[
+  {"id": "crime_theft", "name_id": "report_types.crime_theft"},
+  {"id": "crime_vandalism", "name_id": "report_types.crime_vandalism"},
+  {"id": "infra_road", "name_id": "report_types.infra_road"},
+  {"id": "infra_lights", "name_id": "report_types.infra_lights"},
+  {"id": "enviro_waste", "name_id": "report_types.enviro_waste"},
+  {"id": "enviro_water", "name_id": "report_types.enviro_water"},
+  {"id": "other", "name_id": "report_types.other"}
+]

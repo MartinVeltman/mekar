@@ -1,0 +1,129 @@
+
+{
+  "app_name": "MekarMap",
+  "login": {
+    "title": "Masuk",
+    "user_id": "ID Pengguna",
+    "credentials": "Kata Sandi",
+    "submit": "Masuk",
+    "error": "ID Pengguna atau Kata Sandi tidak valid"
+  },
+  "navigation": {
+    "home": "Beranda",
+    "map": "Peta",
+    "reports": "Laporan",
+    "profile": "Profil"
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "language": "Bahasa",
+    "offline_mode": "Mode Offline",
+    "notifications": "Notifikasi",
+    "save": "Simpan Perubahan"
+  },
+  "language": {
+    "id": "Bahasa Indonesia",
+    "su": "Basa Sunda"
+  },
+  "profile": {
+    "title": "Profil Pengguna",
+    "user_id": "ID Pengguna",
+    "name": "Nama",
+    "role": "Peran",
+    "points": "Poin Hadiah",
+    "logout": "Keluar"
+  },
+  "reports": {
+    "title": "Laporan Saya",
+    "create": "Buat Laporan Baru",
+    "empty": "Belum ada laporan",
+    "status": {
+      "submitted": "Terkirim",
+      "verified": "Terverifikasi",
+      "inprogress": "Sedang Diproses",
+      "resolved": "Selesai",
+      "rejected": "Ditolak"
+    },
+    "update_status": "Perbarui Status"
+  },
+  "report_form": {
+    "title": "Buat Laporan Baru",
+    "type": "Jenis Laporan",
+    "description": "Deskripsi",
+    "location": "Lokasi",
+    "photos": "Foto",
+    "add_photo": "Tambah Foto",
+    "private": "Laporan Pribadi",
+    "submit": "Kirim Laporan",
+    "location_required": "Lokasi diperlukan",
+    "description_required": "Deskripsi diperlukan",
+    "success": "Laporan berhasil dikirim",
+    "offline_saved": "Laporan disimpan offline dan akan dikirim ketika online"
+  },
+  "report_types": {
+    "crime_theft": "Pencurian",
+    "crime_vandalism": "Vandalisme",
+    "infra_road": "Kerusakan Jalan",
+    "infra_lights": "Lampu Jalan Rusak",
+    "enviro_waste": "Pembuangan Sampah Liar",
+    "enviro_water": "Pencemaran Air",
+    "other": "Lainnya"
+  },
+  "map": {
+    "my_location": "Lokasi Saya",
+    "filter": "Filter",
+    "search": "Cari Lokasi",
+    "view_reports": "Lihat Laporan",
+    "view_details": "Lihat Detail"
+  },
+  "tutorial": {
+    "title": "Tutorial",
+    "next": "Selanjutnya",
+    "previous": "Sebelumnya",
+    "skip": "Lewati",
+    "finish": "Selesai",
+    "step1": {
+      "title": "Selamat datang di MekarMap",
+      "content": "Aplikasi pelaporan untuk kemajuan komunitas"
+    },
+    "step2": {
+      "title": "Buat Laporan",
+      "content": "Tekan tombol + untuk melaporkan masalah di komunitas Anda"
+    },
+    "step3": {
+      "title": "Peta Interaktif",
+      "content": "Lihat lokasi laporan di peta dan telusuri masalah di sekitar Anda"
+    },
+    "step4": {
+      "title": "Dapatkan Hadiah",
+      "content": "Kumpulkan poin setiap kali Anda membuat laporan yang terverifikasi"
+    }
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "retry": "Coba lagi",
+    "back": "Kembali",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "view": "Lihat",
+    "view_details": "Lihat Detail",
+    "submit": "Kirim",
+    "close": "Tutup",
+    "yes": "Ya",
+    "no": "Tidak",
+    "offline": "Anda sedang offline",
+    "offline_mode_active": "Mode offline aktif",
+    "public": "Publik",
+    "play": "Putar",
+    "view_all": "Lihat Semua", 
+    "status_updated": "Status berhasil diperbarui"
+  },
+  "roles": {
+    "Resident": "Warga",
+    "GovernmentOfficial": "Petugas Pemerintah",
+    "Administrator": "Administrator"
+  }
+}
