@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -39,9 +38,9 @@ export const ReportCreate: React.FC = () => {
   // Mock function to get current location
   const handleGetLocation = () => {
     // In a real app, this would use the Geolocation API
-    // For mock, generate random coordinates near Bandung, Indonesia
-    const lat = -6.9 + (Math.random() - 0.5) * 0.1;
-    const lon = 107.6 + (Math.random() - 0.5) * 0.1;
+    // For mock, generate random coordinates near Mekarmaju Village, Indonesia
+    const lat = -7.086310730278783 + (Math.random() - 0.5) * 0.01; // Centered on Mekarmaju, smaller radius
+    const lon = 107.46641459325357 + (Math.random() - 0.5) * 0.01; // Centered on Mekarmaju, smaller radius
     
     setLocation({ lat, lon });
     setLocationName(`${lat.toFixed(5)}, ${lon.toFixed(5)}`);

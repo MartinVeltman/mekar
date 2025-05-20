@@ -71,10 +71,12 @@
   },
   "map": {
     "my_location": "Lokasi Saya",
+    "reset_view": "Kembali ke Desa",
     "filter": "Filter",
     "search": "Cari Lokasi",
     "view_reports": "Lihat Laporan",
-    "view_details": "Lihat Detail"
+    "view_details": "Lihat Detail",
+    "village_marker": "Desa Mekarmaju"
   },
   "tutorial": {
     "title": "Tutorial",

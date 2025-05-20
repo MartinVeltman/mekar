@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { useOffline } from '../contexts/OfflineContext';
@@ -26,9 +25,9 @@ interface Report {
   isPrivate: boolean;
 }
 
-// Set the default coordinates (centered on Bandung, Indonesia)
-const DEFAULT_CENTER = [-6.9121, 107.6085] as [number, number]; // Explicitly type as tuple
-const DEFAULT_ZOOM = 12;
+// Set the default coordinates to Mekarmaju village
+const DEFAULT_CENTER = [-7.086310730278783, 107.46641459325357] as [number, number]; // Explicitly type as tuple
+const DEFAULT_ZOOM = 14; // Zoom a bit closer to show the village better
 
 // Fix for Leaflet marker icon issue in React
 // Need to fix default icon paths
@@ -65,6 +64,26 @@ function LocationButton() {
       className="bg-background shadow-lg hover:bg-primary hover:text-primary-foreground"
     >
       <Locate className="h-5 w-5" />
+    </Button>
+  );
+}
+
+// Component to reset map view to Mekarmaju
+function ResetViewButton() {
+  const map = useMap();
+  const { t } = useLanguage();
+  
+  const handleResetView = () => {
+    map.flyTo(DEFAULT_CENTER, DEFAULT_ZOOM);
+  };
+
+  return (
+    <Button 
+      size="icon" 
+      onClick={handleResetView}
+      className="bg-background shadow-lg hover:bg-primary hover:text-primary-foreground"
+    >
+      <MapPin className="h-5 w-5" />
     </Button>
   );
 }
@@ -143,14 +162,12 @@ export const Map: React.FC = () => {
   // Handle navigation to report detail
   const handleViewReportDetail = (reportId: string) => {
     navigate(`/reports/${reportId}`);
-    handleCloseDialog();
   };
 
-  // Simulate playing a media (for future video/audio implementation)
-  const handlePlay = () => {
-    console.log("Playing media for report:", selectedReport?.reportID);
-    // Future implementation for media playback
-    alert(t('common.play') + " - " + selectedReport?.reportID);
+  // Handle media playback
+  const handlePlay = (reportId: string) => {
+    console.log("Playing media for report:", reportId);
+    // Actual media playback implementation would go here
   };
 
   return (
@@ -177,50 +194,46 @@ export const Map: React.FC = () => {
           {/* This component sets the initial view */}
           <SetMapView center={DEFAULT_CENTER} zoom={DEFAULT_ZOOM} />
           
-          {reports.map((report) => {
-            // Create the marker icon
-            const markerIcon = createMarkerIcon(report);
-            
-            return (
-              <Marker 
-                key={report.reportID}
-                position={[report.geoPoint.lat, report.geoPoint.lon]}
-                // @ts-ignore - TypeScript doesn't recognize icon prop but it works in react-leaflet
-                icon={markerIcon}
-                eventHandlers={{
-                  click: () => {
-                    setSelectedReport(report);
-                    setShowReportDialog(true);
-                  }
-                }}
-              >
-                <Popup>
-                  <div className="p-2 min-w-[200px]">
-                    <h3 className="font-semibold text-base">{getReportTypeName(report.type)}</h3>
-                    <p className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                      <Clock className="h-3 w-3" /> {formatDate(report.timestamp)}
-                    </p>
-                    <p className="mt-2 text-sm line-clamp-2">{report.description}</p>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="mt-2 w-full text-xs"
-                      onClick={() => {
-                        setSelectedReport(report);
-                        setShowReportDialog(true);
-                      }}
-                    >
-                      {t('common.view_details')}
-                    </Button>
-                  </div>
-                </Popup>
-              </Marker>
-            );
-          })}
+          {reports.map((report) => (
+            <Marker 
+              key={report.reportID}
+              position={[report.geoPoint.lat, report.geoPoint.lon]}
+              // @ts-ignore - Marker.icon prop typing issue with react-leaflet
+              icon={createMarkerIcon(report)}
+              eventHandlers={{
+                click: () => {
+                  setSelectedReport(report);
+                  setShowReportDialog(true);
+                }
+              }}
+            >
+              <Popup>
+                <div className="p-2 min-w-[200px]">
+                  <h3 className="font-semibold text-base">{getReportTypeName(report.type)}</h3>
+                  <p className="text-xs text-gray-500 flex items-center gap-1 mt-1">
+                    <Clock className="h-3 w-3" /> {formatDate(report.timestamp)}
+                  </p>
+                  <p className="mt-2 text-sm line-clamp-2">{report.description}</p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="mt-2 w-full text-xs"
+                    onClick={() => {
+                      setSelectedReport(report);
+                      setShowReportDialog(true);
+                    }}
+                  >
+                    {t('common.view_details')}
+                  </Button>
+                </div>
+              </Popup>
+            </Marker>
+          ))}
           
           {/* Map controls */}
           <div className="absolute bottom-4 right-4 z-[1000] flex flex-col gap-2">
             <LocationButton />
+            <ResetViewButton /> {/* Added reset view button */}
           </div>
         </MapContainer>
         
@@ -233,7 +246,7 @@ export const Map: React.FC = () => {
       </div>
 
       {/* Report Detail Dialog */}
-      <Dialog open={showReportDialog} onOpenChange={handleCloseDialog}>
+      <Dialog open={showReportDialog} onOpenChange={setShowReportDialog}>
         <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
           {selectedReport && (
             <>
@@ -298,7 +311,7 @@ export const Map: React.FC = () => {
                               size="sm"
                               variant="secondary"
                               className="absolute bottom-2 right-2 h-8 w-8 rounded-full p-0"
-                              onClick={handlePlay}
+                              onClick={() => handlePlay(selectedReport.reportID)}
                             >
                               <span className="sr-only">{t('common.play')}</span>
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
@@ -319,11 +332,16 @@ export const Map: React.FC = () => {
                     {t('report_form.location')}
                   </h3>
                   <div className="h-32 bg-blue-50 rounded-md flex items-center justify-center overflow-hidden">
-                    <div className="text-blue-500 flex flex-col items-center">
-                      <MapPin className="h-8 w-8 animate-pulse" />
-                      <span className="text-xs mt-1 font-mono bg-white/90 px-2 py-0.5 rounded shadow-sm">
-                        {selectedReport.geoPoint.lat.toFixed(5)}, {selectedReport.geoPoint.lon.toFixed(5)}
-                      </span>
+                    <div className="relative w-full h-full">
+                      {/* Static Map Display */}
+                      <img 
+                        src={`https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-s+1A73E8(${selectedReport.geoPoint.lon},${selectedReport.geoPoint.lat})/${selectedReport.geoPoint.lon},${selectedReport.geoPoint.lat},14,0/300x150@2x?access_token=pk.eyJ1IjoiZGVtb21hcGJveCIsImEiOiJjbHRjdm5nNjEwNnBzMmxwZGtybmUyeGQxIn0.BUBYeIHGOVsFLYP0p5ILxg`} 
+                        alt="Location Map"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute bottom-2 right-2 bg-white rounded px-2 py-1 text-xs shadow">
+                        {selectedReport.geoPoint.lat.toFixed(4)}, {selectedReport.geoPoint.lon.toFixed(4)}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -338,7 +356,11 @@ export const Map: React.FC = () => {
                   {t('common.close')}
                 </Button>
                 <Button 
-                  onClick={() => handleViewReportDetail(selectedReport.reportID)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleViewReportDetail(selectedReport.reportID);
+                    handleCloseDialog();
+                  }}
                   className="flex-1"
                 >
                   {t('common.view_details')}
